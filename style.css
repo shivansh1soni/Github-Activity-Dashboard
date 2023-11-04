@@ -4,6 +4,7 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    transition: background-color 0.3s;
 }
 
 h1 {
@@ -11,6 +12,42 @@ h1 {
     color: #fff;
     padding: 20px 0;
     margin: 0;
+    transition: background-color 0.3s;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+input[type="text"] {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #24292e;
+}
+
+button {
+    background-color: #24292e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #1a1f23;
 }
 
 #chart-container {
@@ -19,22 +56,13 @@ h1 {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
 }
 
 #contributions-chart {
     width: 100%;
 }
 
-input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-button {
-    background-color: #24292e;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+canvas {
+    transition: transform 0.3s;
 }

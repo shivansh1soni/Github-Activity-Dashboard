@@ -5,7 +5,6 @@ function fetchGitHubData() {
         .then((data) => {
             const contributionsData = data.map((repo) => repo.stargazers_count);
 
-            // Create a Chart.js graph
             const ctx = document.getElementById("contributions-chart").getContext("2d");
             const chart = new Chart(ctx, {
                 type: "bar",
@@ -29,6 +28,14 @@ function fetchGitHubData() {
                     },
                 },
             });
+            document.body.style.backgroundColor = '#f4f4f4';
+            document.querySelector('h1').style.backgroundColor = '#24292e';
+            document.querySelector('canvas').style.transform = 'scale(1)';
         })
-        .catch((error) => console.error("Error fetching GitHub data:", error));
+        .catch((error) => {
+            console.error("Error fetching GitHub data:", error);
+            document.body.style.backgroundColor = '#FF5733';
+            document.querySelector('h1').style.backgroundColor = '#FF5733';
+            document.querySelector('canvas').style.transform = 'scale(0.8)';
+        });
 }
